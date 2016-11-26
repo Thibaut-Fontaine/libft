@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putlstmem.c                                     :+:      :+:    :+:   */
+/*   ft_lstlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/24 11:43:24 by tfontain          #+#    #+#             */
-/*   Updated: 2016/11/25 15:53:25 by tfontain         ###   ########.fr       */
+/*   Created: 2016/11/25 15:55:27 by tfontain          #+#    #+#             */
+/*   Updated: 2016/11/25 15:58:49 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putlstmem(t_list *lst, t_bool carriage_return)
+size_t			ft_lstlen(t_list *lst)
 {
-	size_t	n;
+	size_t		len;
 
+	len = 0;
 	while (lst != NULL)
 	{
-		n = 0;
-		while (n < lst->content_size)
-		{
-			write(1, (lst->content + n), 1);
-			++n;
-		}
-		if (carriage_return == TRUE)
-			ft_putchar('\n');
+		len = lst->content_size + len;
 		lst = lst->next;
 	}
+	return (len);
 }

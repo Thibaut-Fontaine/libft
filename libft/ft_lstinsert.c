@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putlstmem.c                                     :+:      :+:    :+:   */
+/*   ft_lstinsert.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/24 11:43:24 by tfontain          #+#    #+#             */
-/*   Updated: 2016/11/25 15:53:25 by tfontain         ###   ########.fr       */
+/*   Created: 2016/11/26 03:05:07 by tfontain          #+#    #+#             */
+/*   Updated: 2016/11/26 04:09:46 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putlstmem(t_list *lst, t_bool carriage_return)
+t_list		*ft_lstinsert(t_list **dst, t_list *lst, size_t position)
 {
-	size_t	n;
+	size_t	count;
+	t_list	*tmp;
 
-	while (lst != NULL)
+	if (position <= 1)
+		ft_lstadd(dst, lst);
+	else
 	{
-		n = 0;
-		while (n < lst->content_size)
+		tmp = *dst;
+		count = 2;
+		while (count < position && tmp->next != NULL)
 		{
-			write(1, (lst->content + n), 1);
-			++n;
+			tmp = tmp->next;
+			++count;
 		}
-		if (carriage_return == TRUE)
-			ft_putchar('\n');
-		lst = lst->next;
+		lst->next = tmp->next;
+		tmp->next = lst;
 	}
+	return (lst);
 }

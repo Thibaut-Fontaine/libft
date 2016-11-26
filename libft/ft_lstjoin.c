@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putlstmem.c                                     :+:      :+:    :+:   */
+/*   ft_lstjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/24 11:43:24 by tfontain          #+#    #+#             */
-/*   Updated: 2016/11/25 15:53:25 by tfontain         ###   ########.fr       */
+/*   Created: 2016/11/26 02:35:26 by tfontain          #+#    #+#             */
+/*   Updated: 2016/11/26 02:54:39 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putlstmem(t_list *lst, t_bool carriage_return)
+void		ft_lstjoin(t_list *lst1, t_list *lst2)
 {
-	size_t	n;
-
-	while (lst != NULL)
-	{
-		n = 0;
-		while (n < lst->content_size)
-		{
-			write(1, (lst->content + n), 1);
-			++n;
-		}
-		if (carriage_return == TRUE)
-			ft_putchar('\n');
-		lst = lst->next;
-	}
+	while (lst1->next != NULL)
+		lst1 = lst1->next;
+	ft_lstaddend(lst1, lst2);
 }
