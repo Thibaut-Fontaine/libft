@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/10 02:45:11 by tfontain          #+#    #+#             */
-/*   Updated: 2016/11/10 02:50:47 by tfontain         ###   ########.fr       */
+/*   Created: 2016/11/14 16:40:17 by tfontain          #+#    #+#             */
+/*   Updated: 2017/02/08 13:20:32 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-int			ft_toupper(int c)
+char		*ft_strfjoin(char **s1, char const *s2)
 {
-	if ('a' <= c && c <= 'z')
-		c = c - 32;
-	return (c);
+	char	*tmp;
+	char	*tmp2;
+
+	if (s1 == NULL || *s1 == NULL || s2 == NULL)
+		return (NULL);
+	tmp2 = *s1;
+	if ((tmp = malloc(ft_strlen(*s1) + ft_strlen(s2) + 1)) == NULL)
+		return (NULL);
+	ft_strcpy(tmp, *s1);
+	ft_strcat(tmp, s2);
+	tmp[ft_strlen(*s1) + ft_strlen(s2)] = '\0';
+	free(tmp2);
+	return (tmp);
 }

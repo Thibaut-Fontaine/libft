@@ -6,13 +6,13 @@
 #    By: tfontain <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 04:52:55 by tfontain          #+#    #+#              #
-#    Updated: 2016/12/06 12:31:25 by tfontain         ###   ########.fr        #
+#    Updated: 2017/02/09 11:51:44 by tfontain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = gcc
-HEADER = ./libft.h
+HEADER = ./includes/libft.h
 FLAG = -Wall -Wextra -Werror
 OPTION = -c -I $(HEADER)
 SRC = ft_memccpy.c ft_putnbr.c ft_strequ.c ft_strnequ.c ft_memchr.c \
@@ -26,7 +26,8 @@ SRC = ft_memccpy.c ft_putnbr.c ft_strequ.c ft_strnequ.c ft_memchr.c \
 	  ft_strcpy.c ft_strncat.c ft_tolower.c ft_itoa.c ft_putendl.c \
 	  ft_strdel.c ft_strncmp.c ft_toupper.c ft_memalloc.c ft_putendl_fd.c \
 	  ft_strdup.c ft_strncpy.c ft_lstadd.c ft_lstdel.c ft_lstdelone.c \
-	  ft_lstiter.c ft_lstmap.c ft_lstnew.c ft_lstreplace.c
+	  ft_lstiter.c ft_lstmap.c ft_lstnew.c ft_putlstmem.c ft_lstaddend.c \
+	  ft_lstinsert.c ft_lstaddend.c ft_strfjoin.c
 OBJ = $(addsuffix .o,$(basename $(SRC)))
 
 all : $(NAME)
@@ -42,3 +43,5 @@ fclean : clean
 		rm -f $(NAME)
 
 re : fclean all
+
+.PHONY : all clean fclean re

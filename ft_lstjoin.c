@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 void		ft_lstjoin(t_list *lst1, t_list *lst2)
 {
