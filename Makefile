@@ -30,12 +30,16 @@ SRC = ft_memccpy.c ft_putnbr.c ft_strequ.c ft_strnequ.c ft_memchr.c \
 	  ft_lstinsert.c ft_lstaddend.c ft_strfjoin.c
 OBJ = $(addsuffix .o,$(basename $(SRC)))
 
+.PHONY : all clean fclean re
+
 all : $(NAME)
 
-$(NAME) :
-		$(CC) $(FLAG) $(OPTION) $(SRC)
+$(NAME) : $(OBJ)
 		ar rc $(NAME) $(OBJ)
 		ranlib $(NAME)
+
+%.o : %.c
+	$(CC) $(FLAG) $(OPTION) -c $< -o $@
 
 clean :
 		rm -f $(OBJ)
@@ -43,5 +47,3 @@ fclean : clean
 		rm -f $(NAME)
 
 re : fclean all
-
-.PHONY : all clean fclean re
