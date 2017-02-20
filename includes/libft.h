@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 20:35:19 by tfontain          #+#    #+#             */
-/*   Updated: 2017/01/31 04:27:22 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/02/20 15:52:31 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,7 @@ void				ft_lstaddend(t_list *lst, t_list *new);
 void				ft_lstjoin(t_list *lst1, t_list *lst2);
 t_list				*ft_lstinsert(t_list **dst, t_list *lst, size_t position);
 char				*ft_strfjoin(char **s1, char const *s2);
+void				ft_putnstr_fd_u(char const *s, int fd, size_t size);
+void				ft_putstr_fd_u(char const *s, int fd);
 
 #endif
