@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 22:23:44 by tfontain          #+#    #+#             */
-/*   Updated: 2017/02/20 15:56:16 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/02/20 17:02:51 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void		ft_putnstr_fd_u(char const *s, int fd, size_t size)
 
 	if (s == NULL)
 		return ;
-	s = 0;
+	i = 0;
 	while (s[i] != 0 && size > 0)
 	{
 		while (s[i] != 0)
