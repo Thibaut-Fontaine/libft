@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putwchar_fd.c                                   :+:      :+:    :+:   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/20 20:15:38 by tfontain          #+#    #+#             */
-/*   Updated: 2017/02/21 16:06:32 by tfontain         ###   ########.fr       */
+/*   Created: 2017/02/21 16:53:32 by tfontain          #+#    #+#             */
+/*   Updated: 2017/02/21 16:57:44 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/libft.h"
 
-void				ft_putwchar_fd(wchar_t c, int fd)
+void			ft_puthex(const unsigned char *s, size_t len, size_t mpl)
 {
-	unsigned char	*s;
+	size_t		i;
 
-	s = (unsigned char*)&c;
-	write(fd, s, 1);
-	/*while ((((*s >> 7) & 1) == 1 && ((*s >> 6) & 1) == 0))
+	i = 0;
+	while (i < len)
 	{
-		write(fd, s, 1);
-		++s;
-	}*/
+		ft_putstr(ft_bytohex(s[i]));
+		++i;
+		if (mpl != 0 && i % mpl == 0)
+			ft_putchar('\n');
+		else
+			ft_putchar(' ');
+	}
 }

@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putwchar_fd.c                                   :+:      :+:    :+:   */
+/*   ft_bytobi.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/20 20:15:38 by tfontain          #+#    #+#             */
-/*   Updated: 2017/02/21 16:06:32 by tfontain         ###   ########.fr       */
+/*   Created: 2017/02/21 16:12:53 by tfontain          #+#    #+#             */
+/*   Updated: 2017/02/21 16:59:53 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/libft.h"
 
-void				ft_putwchar_fd(wchar_t c, int fd)
+static char			ft_hex_digit(unsigned n)
 {
-	unsigned char	*s;
+	if (n < 10)
+		return (n + '0');
+	else
+		return ((n - 10) + 'A');
+}
 
-	s = (unsigned char*)&c;
-	write(fd, s, 1);
-	/*while ((((*s >> 7) & 1) == 1 && ((*s >> 6) & 1) == 0))
-	{
-		write(fd, s, 1);
-		++s;
-	}*/
+const char			*ft_bytohex(unsigned char c)
+{
+	static char		hex[3];
+
+	hex[0] = ft_hex_digit(c / 0x10);
+	hex[1] = ft_hex_digit(c % 0x10);
+	hex[2] = 0;
+	return (hex);
 }

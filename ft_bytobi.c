@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putwchar_fd.c                                   :+:      :+:    :+:   */
+/*   ft_bytobi.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/20 20:15:38 by tfontain          #+#    #+#             */
-/*   Updated: 2017/02/21 16:06:32 by tfontain         ###   ########.fr       */
+/*   Created: 2017/02/21 16:12:53 by tfontain          #+#    #+#             */
+/*   Updated: 2017/02/21 16:58:44 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/libft.h"
 
-void				ft_putwchar_fd(wchar_t c, int fd)
+const char			*ft_bytobi(unsigned char c)
 {
-	unsigned char	*s;
+	static char		r[9];
+	size_t			z;
 
-	s = (unsigned char*)&c;
-	write(fd, s, 1);
-	/*while ((((*s >> 7) & 1) == 1 && ((*s >> 6) & 1) == 0))
+	r[0] = 0;
+	z = 128;
+	while (z > 0)
 	{
-		write(fd, s, 1);
-		++s;
-	}*/
+		ft_strcat(r, ((c & z) == z) ? "1" : "0");
+		z >>= 1;
+	}
+	return (r);
 }

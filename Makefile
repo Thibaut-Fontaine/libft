@@ -6,7 +6,7 @@
 #    By: tfontain <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 04:52:55 by tfontain          #+#    #+#              #
-#    Updated: 2017/02/20 20:24:46 by tfontain         ###   ########.fr        #
+#    Updated: 2017/02/21 16:54:58 by tfontain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRC = ft_memccpy.c ft_putnbr.c ft_strequ.c ft_strnequ.c ft_memchr.c \
 	  ft_strdup.c ft_strncpy.c ft_lstadd.c ft_lstdel.c ft_lstdelone.c \
 	  ft_lstiter.c ft_lstmap.c ft_lstnew.c ft_putlstmem.c ft_lstaddend.c \
 	  ft_lstinsert.c ft_lstaddend.c ft_strfjoin.c ft_putwstr_fd.c \
-	  ft_putwchar_fd.c
+	  ft_putwchar_fd.c ft_bytobi.c ft_putbin.c ft_bytohex.c ft_puthex.c
 
 OBJ = $(addsuffix .o,$(basename $(SRC)))
 

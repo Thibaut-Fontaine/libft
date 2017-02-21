@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 20:35:19 by tfontain          #+#    #+#             */
-/*   Updated: 2017/02/20 20:53:09 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/02/21 16:53:18 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,5 +100,13 @@ t_list				*ft_lstinsert(t_list **dst, t_list *lst, size_t position);
 char				*ft_strfjoin(char **s1, char const *s2);
 void				ft_putwstr_fd(wchar_t const *s, int fd);
 void				ft_putwchar_fd(wchar_t c, int fd);
+const char			*ft_bytobi(unsigned char c);
+const char			*ft_bytohex(unsigned char c);
+void				ft_putbin(const unsigned char *s, size_t len, size_t mpl);
+void				ft_puthex(const unsigned char *s, size_t len, size_t mpl);
+
+/*
+** ft_putbin display len bytes in binary, with mpl max bytes per line.
+*/
 
 #endif
