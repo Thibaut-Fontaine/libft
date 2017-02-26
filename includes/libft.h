@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 20:35:19 by tfontain          #+#    #+#             */
-/*   Updated: 2017/02/26 08:37:11 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/02/26 08:43:05 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ char				*ft_strfjoin(char **s1, char const *s2);
 void				ft_putwstr_fd(wchar_t const *s, int fd);
 void				ft_putwchar_fd(wchar_t c, int fd);
 const char			*ft_bytobi(unsigned char c);
-const char			*ft_bytohex(unsigned char c);
+const char			*ft_bytohex(unsigned char c, t_bool big_or_little);
 void				ft_putbin_fd(const unsigned char *s,
 		size_t len, size_t mpl, int fd);
 void				ft_puthex_fd(const unsigned char *s,
