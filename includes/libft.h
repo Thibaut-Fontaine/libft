@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 20:35:19 by tfontain          #+#    #+#             */
-/*   Updated: 2017/02/26 08:43:05 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/02/26 13:26:49 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,7 @@ void				ft_puthex_fd(const unsigned char *s,
 		size_t len, size_t mpl, int fd);
 void				ft_memrev(unsigned char *str, size_t len);
 char				ft_bitoby(unsigned int n);
+uintmax_t			ft_endian(intmax_t i, t_bool is_signed);
 
 /*
 ** ft_put*[bin,hex] display len bytes in binary, with mpl max bytes per line.
