@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 01:56:59 by tfontain          #+#    #+#             */
-/*   Updated: 2017/02/28 21:30:16 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/02/28 21:56:48 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int				ft_swrite(int fd, const void *buf, size_t count)
 	tmp = ft_sget(fd);
 	while (*tmp)
 		++tmp;
-	ft_strncpy(tmp, buf, count);
+	ft_memcpy(tmp, buf, count);
 	*(tmp + count) = 0;
 	return (count);
 }
