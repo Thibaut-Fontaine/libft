@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 20:35:19 by tfontain          #+#    #+#             */
-/*   Updated: 2017/02/27 22:59:38 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/02/28 21:30:53 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+
+# define OUTPUT_LEN 4096
 
 typedef int			t_bool;
 # define FALSE 0
@@ -26,6 +28,12 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_endl
+{
+	int				fd;
+	char			*s;
+}					t_endl;
 
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
@@ -111,6 +119,11 @@ char				ft_bitoby(unsigned int n);
 uintmax_t			ft_endian(uintmax_t i, t_bool is_signed);
 void				ft_putadr_fd(void *p, int fd);
 void				ft_putlnbr_fd(intmax_t n, int fd);
+int					ft_swrite(int fd, const void *buf, size_t count);
+char				*ft_sget(int fd);
+void				ft_sprint(int fd);
+
+
 /*
 ** ft_put*[bin,hex] display len bytes in binary, with mpl max bytes per line.
 */
