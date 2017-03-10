@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 20:35:19 by tfontain          #+#    #+#             */
-/*   Updated: 2017/02/28 21:30:53 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/03/10 11:43:14 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,6 +123,11 @@ int					ft_swrite(int fd, const void *buf, size_t count);
 char				*ft_sget(int fd);
 void				ft_sprint(int fd);
 
+ssize_t				ft_putchar_fdr(char c, int fd);
+ssize_t				ft_putstr_fdr(char const *s, int fd);
+ssize_t				ft_putadr_fdr(void *p, int fd);
+ssize_t				ft_putwstr_fdr(wchar_t const *s, int fd);
+ssize_t				ft_putwchar_fdr(wchar_t c, int fd);
 
 /*
 ** ft_put*[bin,hex] display len bytes in binary, with mpl max bytes per line.
