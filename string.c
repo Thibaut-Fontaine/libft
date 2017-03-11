@@ -6,16 +6,16 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 01:56:59 by tfontain          #+#    #+#             */
-/*   Updated: 2017/02/28 21:56:48 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/03/11 12:41:12 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/libft.h"
 
-t_list				*ft_generate_list(const int fd)
+t_list			*ft_generate_list(const int fd)
 {
-	t_endl			*tmp;
-	t_list			*ret;
+	t_endl		*tmp;
+	t_list		*ret;
 
 	if ((tmp = malloc(sizeof(t_endl))) == NULL)
 		return (NULL);
@@ -27,9 +27,9 @@ t_list				*ft_generate_list(const int fd)
 	return (ret);
 }
 
-t_list				*ft_get_current(const int fd, t_list *current)
+t_list			*ft_get_current(const int fd, t_list *current)
 {
-	int				f_fd;
+	int			f_fd;
 
 	if (current == NULL)
 	{
