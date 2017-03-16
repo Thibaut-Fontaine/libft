@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 20:35:19 by tfontain          #+#    #+#             */
-/*   Updated: 2017/03/10 13:27:14 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/03/16 10:12:35 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,6 +122,7 @@ void				ft_putlnbr_fd(intmax_t n, int fd);
 int					ft_swrite(int fd, const void *buf, size_t count);
 char				*ft_sget(int fd);
 void				ft_sprint(int fd);
+void				*ft_memdup(const void *s, size_t len);
 
 ssize_t				ft_putchar_fdr(char c, int fd);
 ssize_t				ft_putstr_fdr(char const *s, int fd);
