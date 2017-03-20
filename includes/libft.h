@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 20:35:19 by tfontain          #+#    #+#             */
-/*   Updated: 2017/03/18 15:53:16 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/03/20 15:36:15 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,6 +133,8 @@ ssize_t				ft_putwstr_fdr(wchar_t const *s, int fd);
 ssize_t				ft_putwchar_fdr(wchar_t c, int fd);
 ssize_t				ft_putnbr_fdr(int n, int fd);
 
+ssize_t				ft_putnwstr_fdr(wchar_t const *s, size_t n, int fd);
+ssize_t				ft_putnstr_fdr(char const *s, size_t n, int fd);
 /*
 ** ft_put*[bin,hex] display len bytes in binary, with mpl max bytes per line.
 */
