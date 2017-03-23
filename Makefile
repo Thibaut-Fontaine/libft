@@ -6,14 +6,14 @@
 #    By: tfontain <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 04:52:55 by tfontain          #+#    #+#              #
-#    Updated: 2017/03/20 15:37:06 by tfontain         ###   ########.fr        #
+#    Updated: 2017/03/20 21:59:28 by tfontain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = gcc
 HEADER = ./includes/libft.h
-FLAG = -Wall -Wextra -Werror
+FLAG = -Wall -Wextra -Werror -O3
 OPTION = -c -I $(HEADER)
 SRC = ft_memccpy.c ft_putnbr.c ft_strequ.c ft_strnequ.c ft_memchr.c \
 	  ft_putnbr_fd.c ft_striter.c ft_strnew.c ft_atoi.c ft_memcmp.c \

@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 22:23:44 by tfontain          #+#    #+#             */
-/*   Updated: 2017/03/20 15:35:38 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/03/23 03:32:25 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ ssize_t		ft_putnstr_fdr(char const *s, size_t n, int fd)
 
 	if (s == NULL)
 		return (-1);
-	return (write (fd, s, ((len = ft_strlen(s)) > n ? n : len)));
+	return (write(fd, s, ((len = ft_strlen(s)) > n ? n : len)));
 }
