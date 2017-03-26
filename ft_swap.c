@@ -6,13 +6,13 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/26 15:32:07 by tfontain          #+#    #+#             */
-/*   Updated: 2017/03/26 15:33:26 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/03/26 15:46:48 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/libft.h"
 
-void		ft_swap(int *a, int *b)
+void		ft_swap(uintmax_t *a, uintmax_t *b)
 {
 	int		tmp;
 
