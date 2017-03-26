@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 20:35:19 by tfontain          #+#    #+#             */
-/*   Updated: 2017/03/20 15:36:15 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/03/26 15:40:10 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,6 +125,7 @@ void				ft_sprint(int fd);
 void				*ft_memdup(const void *s, size_t len);
 size_t				ft_strwlen(const wchar_t *s);
 char				*ft_strnchr(const char *s, int c, size_t n);
+void				ft_swap(int *a, int *b);
 
 ssize_t				ft_putchar_fdr(char c, int fd);
 ssize_t				ft_putstr_fdr(char const *s, int fd);
@@ -135,6 +136,7 @@ ssize_t				ft_putnbr_fdr(int n, int fd);
 
 ssize_t				ft_putnwstr_fdr(wchar_t const *s, size_t n, int fd);
 ssize_t				ft_putnstr_fdr(char const *s, size_t n, int fd);
+
 /*
 ** ft_put*[bin,hex] display len bytes in binary, with mpl max bytes per line.
 */
