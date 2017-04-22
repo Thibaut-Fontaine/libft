@@ -6,13 +6,13 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 01:56:59 by tfontain          #+#    #+#             */
-/*   Updated: 2017/03/11 12:41:12 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/04/22 04:09:37 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/libft.h"
 
-t_list			*ft_generate_list(const int fd)
+t_list			*ft_generate_l(const int fd)
 {
 	t_endl		*tmp;
 	t_list		*ret;
@@ -27,13 +27,13 @@ t_list			*ft_generate_list(const int fd)
 	return (ret);
 }
 
-t_list			*ft_get_current(const int fd, t_list *current)
+t_list			*ft_get_cur(const int fd, t_list *current)
 {
 	int			f_fd;
 
 	if (current == NULL)
 	{
-		if (!(current = ft_generate_list(fd)))
+		if (!(current = ft_generate_l(fd)))
 			return (NULL);
 		return (current->next = current);
 	}
@@ -45,7 +45,7 @@ t_list			*ft_get_current(const int fd, t_list *current)
 		if (((t_endl*)(current->content))->fd == f_fd)
 			break ;
 	}
-	if (!(current = ft_lstinsert(&current, ft_generate_list(fd), 2)))
+	if (!(current = ft_lstinsert(&current, ft_generate_l(fd), 2)))
 		return (NULL);
 	return (current);
 }
@@ -54,7 +54,7 @@ char			*ft_sget(int fd)
 {
 	static t_list *current = NULL;
 
-	current = ft_get_current(fd, current);
+	current = ft_get_cur(fd, current);
 	return ((((t_endl*)current->content)->s));
 }
 
