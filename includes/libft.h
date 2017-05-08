@@ -6,7 +6,7 @@
 /*   By: tfontain <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/06 20:35:19 by tfontain          #+#    #+#             */
-/*   Updated: 2017/05/08 07:02:00 by tfontain         ###   ########.fr       */
+/*   Updated: 2017/05/08 07:05:30 by tfontain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,7 +139,6 @@ ssize_t				ft_putnstr_fdr(char const *s, size_t n, int fd);
 
 int					dprintf(int fd, const char *format, ...);
 int					printf(const char *format, ...);
-
 
 /*
 ** ft_put*[bin,hex] display len bytes in binary, with mpl max bytes per line.
